@@ -5,13 +5,13 @@
 # @brief Script para sincronizar carpeta compartida usando git 
 
 # Buscar cambios en servidor
-git pull --quiet
+git pull
 
 # Verificar si es necesario hacer push
 verify=$(git shortlog origin/master..master | wc -l)
 
 if (($verify != 0)); then
-  git push --quiet origin master
+  git push origin master
 fi
 
 # Verificar cambios locales
@@ -32,7 +32,7 @@ git commit --allow-empty -m "--"
 
 # Enviar cambios al servidor
 if (($? == 0)); then
-  git push --quiet origin master
+  git push origin master
 else
   . Actualizar.sh
 fi
