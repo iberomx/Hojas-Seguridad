@@ -5,7 +5,7 @@
 # @brief Script para sincronizar carpeta compartida usando git 
 
 # Buscar cambios en servidor
-git --quiet pull
+git pull --quiet
 
 # Verificar si es necesario hacer push
 verify=$(git shortlog origin/master..master | wc -l)
