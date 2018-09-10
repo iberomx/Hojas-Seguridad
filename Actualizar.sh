@@ -32,4 +32,6 @@ git add -A & git commit --allow-empty -m "--"
 # Enviar cambios al servidor
 if (($? == 0)); then
   git push --quiet origin master
+else
+  . Actualizar.sh
 fi
